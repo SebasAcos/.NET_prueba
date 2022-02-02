@@ -12,6 +12,7 @@ namespace PeliculasAPI.Controllers
     {
       
         private readonly IRepositorio repositorio;
+        
 
         public GenerosController(Repositorio.IRepositorio repositorio)
         {
