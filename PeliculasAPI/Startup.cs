@@ -30,10 +30,7 @@ namespace PeliculasAPI
 
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
-            services.AddResponseCaching();
-            services.AddTransient <Repositorio.IRepositorio, Repositorio.RepositorioEnMemoria>();
-            services.AddScoped<Controllers.WeatherForecastController>();
-            services.AddTransient<Filtros.MiFiltroDeAccion>();
+           
 
             services.AddControllers(options =>
             {
@@ -59,7 +56,7 @@ namespace PeliculasAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseResponseCaching();
+          
 
             app.UseAuthentication();
 
