@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using PeliculasAPI.Filtros;
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 using System;
 using System.Collections.Generic;
@@ -22,6 +25,7 @@ namespace PeliculasAPI.Controllers
     {
       
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         private readonly IRepositorio repositorio;
 
         public GenerosController(Repositorio.IRepositorio repositorio)
@@ -31,6 +35,8 @@ namespace PeliculasAPI.Controllers
 
         public 
 =======
+=======
+>>>>>>> Stashed changes
 
         
         private readonly ILogger<GenerosController> logger;

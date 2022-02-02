@@ -17,20 +17,21 @@ namespace PeliculasAPI.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly Repositorio.IRepositorio repostiorio;
+        private readonly Repositorio.IRepositorio repositorio;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger,
-            Repositorio.IRepositorio repostiorio
+            Repositorio.IRepositorio repositorio
             )
         {
             _logger = logger;
-            this.repostiorio = repostiorio;
+            this.repositorio = repositorio;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-           var generos=  repostiorio.ObtenerTodosLosGeneros();
+           var generos= repositorio.ObtenerTodosLosGeneros();
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -39,6 +40,11 @@ namespace PeliculasAPI.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpGet("guid")]
+        public Guid ObtenerGUIDWeatherForecastController()
+        {
+            return repositorio.ObternerGUID();
         }
     }
 }

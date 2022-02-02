@@ -32,7 +32,6 @@ namespace PeliculasAPI
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
         
      
->>>>>>> Stashed changes
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -54,8 +53,6 @@ namespace PeliculasAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-<<<<<<< Updated upstream
-=======
            
 
             app.UseAuthentication();
