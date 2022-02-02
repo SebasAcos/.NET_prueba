@@ -1,0 +1,10 @@
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.csproj.AssemblyReference.cache
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.AssemblyInfoInputs.cache
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.AssemblyInfo.cs
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.csproj.CoreCompileInputs.cache
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.dll
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\ref\PeliculasAPI.dll
+C:\proyectos t\PeliculasAPI\PeliculasAPI\obj\Debug\net5.0\PeliculasAPI.pdb

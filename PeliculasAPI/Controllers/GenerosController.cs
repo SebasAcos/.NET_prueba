@@ -1,14 +1,10 @@
-<<<<<<< Updated upstream
+
 ﻿using Microsoft.AspNetCore.Mvc;
 using PeliculasAPI.Repositorio;
-=======
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
-using PeliculasAPI.Filtros;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
