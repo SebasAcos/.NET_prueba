@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using PeliculasAPI.Filtros;
 using PeliculasAPI.Repositorio;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +23,8 @@ namespace PeliculasAPI.Controllers
     {
       
         private readonly IRepositorio repositorio;
-<<<<<<< Updated upstream
-        
-=======
         private readonly WeatherForecastController weatherForecastController;
         private readonly ILogger<GenerosController> logger;
->>>>>>> Stashed changes
 
         public GenerosController(Repositorio.IRepositorio repositorio, 
             WeatherForecastController weatherForecastController,
