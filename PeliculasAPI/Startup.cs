@@ -26,7 +26,13 @@ namespace PeliculasAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< Updated upstream
             services.AddTransient<Repositorio.IRepositorio, Repositorio.IRepositorio>();
+=======
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+        
+     
+>>>>>>> Stashed changes
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -48,6 +54,12 @@ namespace PeliculasAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+<<<<<<< Updated upstream
+=======
+           
+
+            app.UseAuthentication();
+>>>>>>> Stashed changes
 
             app.UseAuthorization();
 
