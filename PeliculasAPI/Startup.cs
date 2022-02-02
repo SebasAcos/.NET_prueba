@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
@@ -25,10 +27,19 @@ namespace PeliculasAPI
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddTransient<Repositorio.IRepositorio, Repositorio.IRepositorio>();
 
-            services.AddControllers();
+        {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+            services.AddResponseCaching();
+            services.AddTransient <Repositorio.IRepositorio, Repositorio.RepositorioEnMemoria>();
+            services.AddScoped<Controllers.WeatherForecastController>();
+            services.AddTransient<Filtros.MiFiltroDeAccion>();
+
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(Filtros.FiltroDeExcepcion));
+            }
+            ); 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PeliculasAPI", Version = "v1" });
@@ -48,6 +59,9 @@ namespace PeliculasAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseResponseCaching();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

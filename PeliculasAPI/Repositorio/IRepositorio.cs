@@ -8,6 +8,11 @@ namespace PeliculasAPI.Repositorio
 {
    public interface IRepositorio
     {
+        void CrearGenero(Genero genero);
+
+        //Task metodo asingrono 
+        Task<Genero> obtenerPorId(int Id);
         List<Genero> ObtenerTodosLosGeneros();
+        Guid ObternerGUID();
     }
 }
